@@ -18,14 +18,18 @@
             background: url('./hero-bg.jpg') no-repeat center center/cover;
             text-align: center;
             color: white;
+            position: relative;
+            overflow: hidden;
         }
         .hero h1 {
             font-size: 4rem;
             margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
         }
         .hero p {
             font-size: 1.5rem;
             margin: 10px 0 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
         }
         .hero a {
             text-decoration: none;
@@ -41,7 +45,7 @@
         nav {
             position: fixed;
             top: 20px;
-            right: 20px;
+            left: 20px;  /* Adjusted position to top-left */
             z-index: 1000;  /* Ensures the nav stays above other content */
         }
         nav img {
@@ -49,7 +53,7 @@
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            border: 2px solid white;
+            border: none; /* Removed border to make the image purely round without button-like background */
         }
         nav ul {
             list-style: none;
@@ -87,7 +91,7 @@
 <body>
     <div class="hero">
         <nav>
-            <!-- Andrew Tate Image as a Round Button -->
+            <!-- Andrew Tate Image as a Round Icon (no button background) -->
             <a href="#">
                 <img src="./andrew-tate.jpg" alt="Home" />
             </a>
