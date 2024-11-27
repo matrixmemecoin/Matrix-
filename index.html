@@ -39,9 +39,10 @@
             background-color: #0056b3;
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
+            z-index: 1000;  /* Ensures the nav stays above other content */
         }
         nav img {
             width: 50px;
@@ -86,15 +87,15 @@
 <body>
     <div class="hero">
         <nav>
+            <!-- Andrew Tate Image as a Round Button -->
+            <a href="#">
+                <img src="./andrew-tate.jpg" alt="Home" />
+            </a>
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#how-to-buy">How to Buy</a></li>
             </ul>
-            <!-- Home Button Image (Andrew Tate) -->
-            <a href="#" id="home-btn">
-                <img src="./andrew-tate.jpg" alt="Home" />
-            </a>
         </nav>
         <h1>Matrix Memecoin</h1>
         <p>The key to escaping the matrix lies in your hands.</p>
@@ -103,19 +104,30 @@
     
     <section id="about">
         <h2>About Us</h2>
-        <p>Matrix Memecoin is inspired by the meme of escaping the matrix. Our goal is to provide financial freedom and the tools to break free from traditional systems.</p>
+        <p><b>Matrix Memecoin</b> is a revolutionary new cryptocurrency inspired by the meme culture surrounding the concept of escaping the "matrix." We believe that financial freedom is the key to breaking free from the traditional systems that control our lives. Our mission is to provide a decentralized and secure platform where anyone can join the movement to escape financial oppression.</p>
+        <p>Our team is dedicated to building a strong community and providing innovative solutions to help you manage and grow your wealth. The Matrix Memecoin is more than just a token—it's a lifestyle, a philosophy, and a chance to take control of your future.</p>
+        <p>By joining the Matrix Memecoin community, you're becoming part of a global movement that is pushing the boundaries of what's possible with blockchain technology. Together, we aim to disrupt the current financial system and give power back to the people.</p>
     </section>
     
     <section id="roadmap" class="roadmap">
         <h2>Roadmap</h2>
-        <p><b>Phase 1:</b> Launch the Matrix Memecoin.<br>
-        <b>Phase 2:</b> Grow the community.<br>
-        <b>Phase 3:</b> Release exclusive content and merchandise.</p>
+        <p><b>Phase 1:</b> Launch the Matrix Memecoin and begin marketing the project to build awareness. We will also list the token on popular decentralized exchanges for easy access.<br>
+        <b>Phase 2:</b> Focus on growing our community through social media campaigns, giveaways, and partnerships with influencers. We'll also introduce an exclusive NFT collection to engage users.<br>
+        <b>Phase 3:</b> Release additional utility for the token, including exclusive content, merchandise, and a staking program that rewards our loyal supporters. We will also expand to more exchanges to increase accessibility.<br>
+        <b>Phase 4:</b> Continue expanding the project and form partnerships with like-minded projects in the cryptocurrency space. We plan to introduce a decentralized application (dApp) for better user interaction and staking rewards.</p>
     </section>
     
     <section id="how-to-buy" class="how-to-buy">
         <h2>How to Buy</h2>
-        <p>Head to <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Dexscreener</a> and click on the "Website" button for more details on how to trade.</p>
+        <p>To purchase Matrix Memecoin, follow these simple steps:</p>
+        <ol>
+            <li><b>Step 1:</b> Set up a cryptocurrency wallet that supports Solana-based tokens, such as <a href="https://phantom.app" target="_blank">Phantom Wallet</a>.</li>
+            <li><b>Step 2:</b> Buy Solana (SOL) from an exchange such as Binance or Coinbase, and transfer it to your wallet.</li>
+            <li><b>Step 3:</b> Go to the <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Matrix Memecoin Dexscreener page</a> and connect your wallet.</li>
+            <li><b>Step 4:</b> Swap your SOL for Matrix Memecoin (MATRIX) on the exchange page.</li>
+            <li><b>Step 5:</b> Hold and stake your tokens for rewards or trade them at your convenience.</li>
+        </ol>
+        <p>We are committed to providing a simple and secure way for everyone to get involved in the Matrix Memecoin ecosystem. Join us today and start your journey towards financial freedom!</p>
     </section>
 </body>
 </html>
