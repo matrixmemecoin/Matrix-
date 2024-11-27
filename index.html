@@ -43,9 +43,9 @@
             background-color: #0056b3;
         }
         nav {
-            position: fixed;
+            position: absolute;
             top: 20px;
-            left: 20px;  /* Adjusted position to top-left */
+            right: 20px;  /* Keeps the navigation buttons at the top right */
             z-index: 1000;  /* Ensures the nav stays above other content */
         }
         nav img {
@@ -53,7 +53,7 @@
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            border: none; /* Removed border to make the image purely round without button-like background */
+            border: none; /* Removed blue square background */
         }
         nav ul {
             list-style: none;
@@ -91,7 +91,7 @@
 <body>
     <div class="hero">
         <nav>
-            <!-- Andrew Tate Image as a Round Icon (no button background) -->
+            <!-- Only Andrew Tate Image in Top Left -->
             <a href="#">
                 <img src="./andrew-tate.jpg" alt="Home" />
             </a>
