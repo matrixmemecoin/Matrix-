@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Memecoin</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: black;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: lime;
+        }
+
+        .navbar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .navbar img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1920x1080/?luxury,car') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            padding-top: 60px; /* Space for navbar */
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            background: red;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero a:hover {
+            background: darkred;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px green, 0 0 20px green;
+            }
+            to {
+                text-shadow: 0 0 20px lime, 0 0 30px lime;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .about {
+            background: #111;
+        }
+
+        .roadmap {
+            background: #222;
+        }
+
+        .how-to-buy {
+            background: #111;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: red;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: black;
+            color: white;
+        }
+
+        footer a {
+            color: lime;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home"><img src="Screenshot 2024-11-27 181654.png" alt="Home"></a>
+        <div>
+            <a href="#about">About Us</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#how-to-buy">How to Buy</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="home" class="hero">
+        <h1>Matrix Memecoin</h1>
+        <p>The key to escaping the matrix lies in your hands.</p>
+        <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Trade Now</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+            Matrix Memecoin is inspired by the idea of breaking free from the system. Built on the Solana blockchain, it represents empowerment, luxury, and a new financial era. Join us to escape the matrix and seize control of your financial future.
+        </p>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <h2>Roadmap</h2>
+        <p>
+            <strong>Phase 1:</strong> Launch and community building.<br>
+            <strong>Phase 2:</strong> Token listing and partnerships.<br>
+            <strong>Phase 3:</strong> NFT integration and staking options.<br>
+            <strong>Phase 4:</strong> Full matrix ecosystem rollout.
+        </p>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy" class="how-to-buy">
+        <h2>How to Buy</h2>
+        <p>
+            1. Visit <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">DexScreener</a>.<br>
+            2. Search for "Matrix Memecoin" and connect your wallet.<br>
+            3. Swap Solana (SOL) for $MATRIX.<br>
+            4. Enjoy your journey to escape the matrix!
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Matrix Memecoin | <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Check us on DexScreener</a></p>
+    </footer>
+</body>
+</html>
