@@ -13,10 +13,9 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-
-        /* Hero section */
         .hero {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -26,19 +25,16 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero h1 {
             font-size: 4rem;
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
         }
-
         .hero p {
             font-size: 1.5rem;
             margin: 10px 0 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
         }
-
         .hero a {
             text-decoration: none;
             padding: 15px 30px;
@@ -47,152 +43,99 @@
             border-radius: 5px;
             font-size: 1.2rem;
         }
-
         .hero a:hover {
             background-color: #0056b3;
         }
-
-        /* Home button on top right with up arrow */
-        .home-button {
+        nav {
             position: absolute;
             top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            background-color: #007bff;
-            color: white;
+            left: 20px; /* Andrew Tate button is now on the left */
+            z-index: 1000;  /* Ensures the nav stays above other content */
+        }
+        nav img {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            font-size: 1.5rem;
-            text-align: center;
             cursor: pointer;
+            border: none; /* Removed blue square background completely */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 20px;
         }
-
-        .home-button i {
-            font-size: 1.5rem; /* Arrow size */
+        nav ul li {
+            display: inline;
         }
-
-        /* Stickman character with Andrew Tate's head */
-        .stickman {
-            position: absolute;
-            right: 5%; /* Positioned on the right side */
-            bottom: 10%; /* Positioned slightly above the bottom */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
         }
-
-        .stickman img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+        nav ul li a:hover {
+            background: rgba(0, 0, 0, 0.8);
         }
-
-        .stickman-body {
-            width: 2px;
-            height: 80px;
-            background-color: black;
+        section {
+            padding: 40px 20px;
+            text-align: center;
         }
-
-        .stickman-arms {
-            display: flex;
-            justify-content: space-between;
-            width: 60px;
-        }
-
-        .stickman-arms div {
-            width: 20px;
-            height: 2px;
-            background-color: black;
-        }
-
-        .stickman-legs {
-            display: flex;
-            justify-content: space-between;
-            width: 60px;
-            margin-top: 10px;
-        }
-
-        .stickman-legs div {
-            width: 20px;
-            height: 2px;
-            background-color: black;
-        }
-
-        /* Thinking bubble with transparency */
-        .thinking-bubble {
-            position: absolute;
-            top: -50px; /* Positioning above the stickman */
-            left: -40px;
-            width: 120px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
-            border-radius: 15px;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .thinking-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            margin-left: -10px;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            border: solid 5px transparent;
-            border-top-color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Money stacks inside the bubble */
-        .money-stacks {
-            font-size: 24px;
-            color: green;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .money-stacks::before {
-            content: "💸💰💸"; /* Emoji money stacks */
+        .roadmap, .how-to-buy {
+            background: #f4f4f4;
+            margin: 20px 0;
+            padding: 40px 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <!-- Home button with up arrow -->
-        <div class="home-button">
-            <i class="fas fa-arrow-up"></i> <!-- Arrow icon -->
-        </div>
-
+        <!-- Only the Andrew Tate button is on the left now -->
+        <nav>
+            <a href="#">
+                <img src="./andrew-tate.jpg" alt="Andrew Tate" />
+            </a>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#how-to-buy">How to Buy</a></li>
+            </ul>
+        </nav>
         <h1>Matrix Memecoin</h1>
         <p>The key to escaping the matrix lies in your hands.</p>
         <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Trade Now</a>
-
-        <!-- Stickman character with thinking bubble -->
-        <div class="stickman">
-            <img src="./andrew-tate.jpg" alt="Andrew Tate">
-            <div class="stickman-body"></div>
-            <div class="stickman-arms">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="stickman-legs">
-                <div></div>
-                <div></div>
-            </div>
-
-            <!-- Thinking bubble with money stacks -->
-            <div class="thinking-bubble">
-                <div class="money-stacks"></div>
-            </div>
-        </div>
     </div>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p><b>Matrix Memecoin</b> is a revolutionary new cryptocurrency inspired by the meme culture surrounding the concept of escaping the "matrix." We believe that financial freedom is the key to breaking free from the traditional systems that control our lives. Our mission is to provide a decentralized and secure platform where anyone can join the movement to escape financial oppression.</p>
+        <p>Our team is dedicated to building a strong community and providing innovative solutions to help you manage and grow your wealth. The Matrix Memecoin is more than just a token—it's a lifestyle, a philosophy, and a chance to take control of your future.</p>
+        <p>By joining the Matrix Memecoin community, you're becoming part of a global movement that is pushing the boundaries of what's possible with blockchain technology. Together, we aim to disrupt the current financial system and give power back to the people.</p>
+    </section>
+    
+    <section id="roadmap" class="roadmap">
+        <h2>Roadmap</h2>
+        <p><b>Phase 1:</b> Launch the Matrix Memecoin and begin marketing the project to build awareness. We will also list the token on popular decentralized exchanges for easy access.<br>
+        <b>Phase 2:</b> Focus on growing our community through social media campaigns, giveaways, and partnerships with influencers. We'll also introduce an exclusive NFT collection to engage users.<br>
+        <b>Phase 3:</b> Release additional utility for the token, including exclusive content, merchandise, and a staking program that rewards our loyal supporters. We will also expand to more exchanges to increase accessibility.<br>
+        <b>Phase 4:</b> Continue expanding the project and form partnerships with like-minded projects in the cryptocurrency space. We plan to introduce a decentralized application (dApp) for better user interaction and staking rewards.</p>
+    </section>
+    
+    <section id="how-to-buy" class="how-to-buy">
+        <h2>How to Buy</h2>
+        <p>To purchase Matrix Memecoin, follow these simple steps:</p>
+        <ol>
+            <li><b>Step 1:</b> Set up a cryptocurrency wallet that supports Solana-based tokens, such as <a href="https://phantom.app" target="_blank">Phantom Wallet</a>.</li>
+            <li><b>Step 2:</b> Buy Solana (SOL) from an exchange such as Binance or Coinbase, and transfer it to your wallet.</li>
+            <li><b>Step 3:</b> Go to the <a href="https://dexscreener.com/solana/EYqyrYagn4eiFgXY1sEnkXjagyNgovmqdRkMD7kMWmxX" target="_blank">Matrix Memecoin Dexscreener page</a> and connect your wallet.</li>
+            <li><b>Step 4:</b> Swap your SOL for Matrix Memecoin (MATRIX) on the exchange page.</li>
+            <li><b>Step 5:</b> Hold and stake your tokens for rewards or trade them at your convenience.</li>
+        </ol>
+        <p>We are committed to providing a simple and secure way for everyone to get involved in the Matrix Memecoin ecosystem. Join us today and start your journey towards financial freedom!</p>
+    </section>
 </body>
 </html>
